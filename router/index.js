@@ -1,8 +1,8 @@
 const router=require('express').Router()
 
-const userChecker = require('../controllers')
+const {userChecker,tokenChecker} = require('../controllers')
 
-
-router.route('/').post(userChecker)
+router.route('/email-checker').post(userChecker)
+router.route('/tokenVerify').post(tokenChecker)
 
 module.exports=router

@@ -15,9 +15,9 @@ admin.initializeApp({
 
 const app=express()
 
-app.use(express.json())
 app.use(cors())
-app.use('/email-checker',router)
+app.use(express.json())
+app.use('/',router)
 
 
 app.listen(3005,()=>{
